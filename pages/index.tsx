@@ -12,7 +12,7 @@ export default function Home() {
   const [futureJobs, setFutureJobs] = useState<String>('');
   const [loading, setLoading] = useState<boolean>(false);
 
-  const prompt = `If AI takes over the world, predict 2 future jobs with a ${vibe} vibe and description less than 50 characters for a person with current job as a ${currentJob}.`;
+  const prompt = `If AI takes over the world, predict 2 future jobs with a ${vibe} vibe and descriptions having less than 50 characters clearly labeled "1." and "2." for a person with current job as a ${currentJob}.`;
 
   const generateFutureJobs = async (e: any) => {
     e.preventDefault();
