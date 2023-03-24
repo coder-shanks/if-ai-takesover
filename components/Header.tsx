@@ -1,4 +1,4 @@
-import { Box, Circle, Heading, Spacer } from '@chakra-ui/react';
+import { Flex, Heading, Spacer } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -26,7 +26,19 @@ export default function Header() {
       </Link>
 
       <Spacer />
-      <Box>
+      <Flex gap="8px">
+        <a
+          href="https://github.com/coder-shanks/if-ai-takesover"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/githubLogo.svg"
+            alt="GitHub Logo"
+            height={32}
+            width={32}
+          />
+        </a>
         <a
           href="https://twitter.com/fighter_shanks"
           target="_blank"
@@ -35,12 +47,12 @@ export default function Header() {
           <Image
             alt="Straw Hat Icon"
             src="/strawHatLogo.jpg"
-            width={36}
-            height={36}
+            width={32}
+            height={32}
             style={{ borderRadius: '50%' }}
           />
         </a>
-      </Box>
+      </Flex>
     </header>
   );
 }
